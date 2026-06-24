@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=1920"/>
+<title>MontAI – Slides Video</title>
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; font-family:'Segoe UI',Arial,sans-serif; }
+  body { background:#111; display:flex; flex-direction:column; align-items:center; justify-content:center; min-height:100vh; }
+
+  .instructions {
+    color:#888; font-size:13px; text-align:center; margin-bottom:16px;
+    background:#1a1a1a; border:1px solid #333; padding:10px 20px; border-radius:8px;
+  }
+  .instructions span { color:#C9A84C; font-weight:bold; }
+
+  .nav { display:flex; gap:8px; margin-bottom:12px; }
+  .nav button {
+    background:#1a1a1a; border:1px solid #C9A84C; color:#C9A84C;
+    padding:6px 14px; border-radius:6px; cursor:pointer; font-size:12px; font-weight:600;
+  }
+  .nav button.active { background:#C9A84C; color:#000; }
+  .nav button:hover { background:#C9A84C; color:#000; }
+
+  .slide-counter { color:#666; font-size:12px; margin-bottom:8px; }
+
+  /* Slide container: exactly 1920x1080 scaled to fit screen */
+  .stage {
+    width:960px; height:540px;
+    position:relative; overflow:hidden;
+    border:2px solid #333;
+    border-radius:4px;
+  }
+
+  .slide {
+    width:100%; height:100%;
+    background:#000;
+    display:none;
+    align-items:center;
+    justify-content:center;
+    position:relative;
+    overflow:hidden;
+  }
+  .slide.active { display:flex; }
+
+  /* Background glow */
+  .glow-center {
+    position:absolute;
+    width:600px; height:600px;
+    background:radial-gradient(circle, rgba(201,168,76,0.12) 0%, transparent 70%);
+    top:50%; left:50%; transform:translate(-50%,-50%);
+    pointer-events:none;
+  }
+  .glow-top {
+    position:absolute;
+    width:800px; height:400px;
+    background:radial-gradient(ellipse, rgba(201,168,76,0.08) 0%, transparent 70%);
+    top:-100px; left:50%; transform:translateX(-50%);
+    pointer-events:none;
+  }
+
+  /* Gold divider line */
+  .gold-line {
+    width:80px; height:3px;
+    background:linear-gradient(90deg,transparent,#C9A84C,transparent);
+    margin:16px auto;
+  }
+
+  /* SLIDE 1 – INTRO */
+  .slide-1 .content {
+    display:flex; flex-direction:column; align-items:center; text-align:center; z-index:1;
+  }
+  .slide-1 .logo {
+    width:180px; margin-bottom:24px;
+    filter: drop-shadow(0 0 20px rgba(201,168,76,0.5));
+  }
+  .slide-1 .tagline {
+    font-size:28px; font-weight:800; color:#fff; letter-spacing:0.02em;
+    text-transform:uppercase; margin-bottom:8px;
+  }
+  .slide-1 .sub {
+    font-size:16px; color:rgba(255,255,255,0.5); letter-spacing:0.15em; text-transform:uppercase;
+  }
+  .slide-1 .badge {
+    margin-top:28px;
+    display:inline-flex; align-items:center; gap:8px;
+    background:rgba(201,168,76,0.1); border:1px solid rgba(201,168,76,0.35);
+    border-radius:40px; padding:8px 20px;
+    color:#C9A84C; font-size:13px; font-weight:600; letter-spacing:0.05em;
+  }
+  .pulse { width:8px; height:8px; border-radius:50%; background:#C9A84C; animation:pulse 2s infinite; }
+  @keyframes pulse { 0%,100%{opacity:1} 50%{opacity:0.3} }
+
+  /* SLIDE 2-5 – SERVICES */
+  .slide-service .content {
+    display:flex; flex-direction:column; align-items:center; text-align:center;
+    z-index:1; max-width:700px; padding:0 40px;
+  }
+  .service-num {
+    font-size:11px; font-weight:800; letter-spacing:0.3em; color:#C9A84C;
+    text-transform:uppercase; margin-bottom:16px;
+  }
+  .icon-box {
+    width:90px; height:90px;
+    background:linear-gradient(135deg, rgba(201,168,76,0.15), rgba(201,168,76,0.05));
+    border:1px solid rgba(201,168,76,0.3);
+    border-radius:24px;
+    display:flex; align-items:center; justify-content:center;
+    font-size:44px; margin-bottom:24px;
+    box-shadow:0 0 30px rgba(201,168,76,0.15);
+  }
+  .service-title {
+    font-size:34px; font-weight:900; color:#fff; line-height:1.15;
+    margin-bottom:16px;
+  }
+  .service-title .gold { color:#C9A84C; }
+  .service-desc {
+    font-size:15px; color:rgba(255,255,255,0.55); line-height:1.7; max-width:560px;
+  }
+
+  /* Side accent lines */
+  .accent-left {
+    position:absolute; left:40px; top:50%; transform:translateY(-50%);
+    width:3px; height:120px;
+    background:linear-gradient(180deg,transparent,#C9A84C,transparent);
+  }
+  .accent-right {
+    position:absolute; right:40px; top:50%; transform:translateY(-50%);
+    width:3px; height:120px;
+    background:linear-gradient(180deg,transparent,#C9A84C,transparent);
+  }
+
+  /* SLIDE 6 – CIERRE */
+  .slide-close .content {
+    display:flex; flex-direction:column; align-items:center; text-align:center; z-index:1;
+  }
+  .slide-close .logo { width:160px; margin-bottom:20px; filter: drop-shadow(0 0 20px rgba(201,168,76,0.4)); }
+  .slide-close .cta-title {
+    font-size:32px; font-weight:900; color:#fff; margin-bottom:8px;
+  }
+  .slide-close .cta-title .gold { color:#C9A84C; }
+  .slide-close .url {
+    font-size:18px; color:rgba(255,255,255,0.5); margin:12px 0 24px;
+    letter-spacing:0.1em;
+  }
+  .slide-close .wa-btn {
+    display:inline-flex; align-items:center; gap:10px;
+    background:linear-gradient(135deg,#C9A84C,#E4C472);
+    color:#000; font-size:15px; font-weight:800;
+    padding:14px 32px; border-radius:16px;
+    letter-spacing:0.03em;
+    box-shadow:0 0 30px rgba(201,168,76,0.4);
+  }
+
+  /* Corner logo on service slides */
+  .corner-logo {
+    position:absolute; bottom:20px; right:24px; z-index:2;
+    opacity:0.4;
+  }
+  .corner-logo img { height:28px; }
+
+  /* Slide number indicator */
+  .slide-indicator {
+    position:absolute; bottom:20px; left:50%; transform:translateX(-50%);
+    display:flex; gap:6px; z-index:2;
+  }
+  .dot {
+    width:6px; height:6px; border-radius:50%;
+    background:rgba(255,255,255,0.2);
+  }
+  .dot.active { background:#C9A84C; }
+
+  /* Copy hint overlay */
+  .copy-hint {
+    margin-top:12px; color:#555; font-size:11px; text-align:center;
+  }
+</style>
+</head>
+<body>
+
+<div class="instructions">
+  Usa las flechas <span>← →</span> del teclado o los botones para cambiar de diapositiva.
+  Pon el navegador en <span>pantalla completa (F11)</span> y haz captura de cada slide (<span>Win+Shift+S</span>)
+</div>
+
+<div class="nav">
+  <button onclick="goTo(0)" id="btn0" class="active">Intro</button>
+  <button onclick="goTo(1)" id="btn1">Leads</button>
+  <button onclick="goTo(2)" id="btn2">Agente IA</button>
+  <button onclick="goTo(3)" id="btn3">Agenda</button>
+  <button onclick="goTo(4)" id="btn4">Propuestas</button>
+  <button onclick="goTo(5)" id="btn5">Cierre</button>
+</div>
+
+<div class="slide-counter" id="counter">Diapositiva 1 de 6</div>
+
+<div class="stage">
+
+  <!-- SLIDE 1: INTRO -->
+  <div class="slide slide-1 active">
+    <div class="glow-top"></div>
+    <div class="glow-center"></div>
+    <div class="content">
+      <img class="logo" src="https://base44.app/api/apps/6a2967e622900c72295950a6/files/mp/public/6a2967e622900c72295950a6/955522bfb_MontAILogo_v2.png" alt="MontAI"/>
+      <div class="tagline">Automatización con IA</div>
+      <div class="gold-line"></div>
+      <div class="sub">para tu negocio</div>
+      <div class="badge">
+        <div class="pulse"></div>
+        Resultados en menos de 30 días
+      </div>
+    </div>
+    <div class="slide-indicator">
+      <div class="dot active"></div><div class="dot"></div><div class="dot"></div>
+      <div class="dot"></div><div class="dot"></div><div class="dot"></div>
+    </div>
+  </div>
+
+  <!-- SLIDE 2: LEADS -->
+  <div class="slide slide-service">
+    <div class="glow-center"></div>
+    <div class="accent-left"></div>
+    <div class="accent-right"></div>
+    <div class="content">
+      <div class="service-num">Servicio 01</div>
+      <div class="icon-box">🎯</div>
+      <div class="service-title">Seguimiento de <span class="gold">leads automático</span></div>
+      <div class="gold-line"></div>
+      <div class="service-desc">Cada prospecto recibe atención inmediata y personalizada, de forma automática, hasta convertirse en cliente. Sin perder ninguna oportunidad.</div>
+    </div>
+    <div class="corner-logo"><img src="https://base44.app/api/apps/6a2967e622900c72295950a6/files/mp/public/6a2967e622900c72295950a6/955522bfb_MontAILogo_v2.png" alt="MontAI"/></div>
+    <div class="slide-indicator">
+      <div class="dot"></div><div class="dot active"></div><div class="dot"></div>
+      <div class="dot"></div><div class="dot"></div><div class="dot"></div>
+    </div>
+  </div>
+
+  <!-- SLIDE 3: AGENTE IA -->
+  <div class="slide slide-service">
+    <div class="glow-center"></div>
+    <div class="accent-left"></div>
+    <div class="accent-right"></div>
+    <div class="content">
+      <div class="service-num">Servicio 02</div>
+      <div class="icon-box">🤖</div>
+      <div class="service-title">Agente de texto <span class="gold">IA 24/7</span></div>
+      <div class="gold-line"></div>
+      <div class="service-desc">Un asistente inteligente que responde a tus clientes a cualquier hora del día, resuelve sus dudas y los guía hacia la compra, mientras tú descansas.</div>
+    </div>
+    <div class="corner-logo"><img src="https://base44.app/api/apps/6a2967e622900c72295950a6/files/mp/public/6a2967e622900c72295950a6/955522bfb_MontAILogo_v2.png" alt="MontAI"/></div>
+    <div class="slide-indicator">
+      <div class="dot"></div><div class="dot"></div><div class="dot active"></div>
+      <div class="dot"></div><div class="dot"></div><div class="dot"></div>
+    </div>
+  </div>
+
+  <!-- SLIDE 4: AGENDAMIENTO -->
+  <div class="slide slide-service">
+    <div class="glow-center"></div>
+    <div class="accent-left"></div>
+    <div class="accent-right"></div>
+    <div class="content">
+      <div class="service-num">Servicio 03</div>
+      <div class="icon-box">📆</div>
+      <div class="service-title">Agendamiento <span class="gold">inteligente</span></div>
+      <div class="gold-line"></div>
+      <div class="service-desc">Olvídate del caos de las agendas manuales. MontAI gestiona tus citas y envía recordatorios automáticos para que tu calendario esté siempre organizado.</div>
+    </div>
+    <div class="corner-logo"><img src="https://base44.app/api/apps/6a2967e622900c72295950a6/files/mp/public/6a2967e622900c72295950a6/955522bfb_MontAILogo_v2.png" alt="MontAI"/></div>
+    <div class="slide-indicator">
+      <div class="dot"></div><div class="dot"></div><div class="dot"></div>
+      <div class="dot active"></div><div class="dot"></div><div class="dot"></div>
+    </div>
+  </div>
+
+  <!-- SLIDE 5: PROPUESTAS -->
+  <div class="slide slide-service">
+    <div class="glow-center"></div>
+    <div class="accent-left"></div>
+    <div class="accent-right"></div>
+    <div class="content">
+      <div class="service-num">Servicio 04</div>
+      <div class="icon-box">📝</div>
+      <div class="service-title">Propuestas <span class="gold">automáticas</span></div>
+      <div class="gold-line"></div>
+      <div class="service-desc">Propuestas comerciales personalizadas en segundos, listas para cerrar negocios más rápido y con más impacto. Tu equipo vende sin esfuerzo extra.</div>
+    </div>
+    <div class="corner-logo"><img src="https://base44.app/api/apps/6a2967e622900c72295950a6/files/mp/public/6a2967e622900c72295950a6/955522bfb_MontAILogo_v2.png" alt="MontAI"/></div>
+    <div class="slide-indicator">
+      <div class="dot"></div><div class="dot"></div><div class="dot"></div>
+      <div class="dot"></div><div class="dot active"></div><div class="dot"></div>
+    </div>
+  </div>
+
+  <!-- SLIDE 6: CIERRE -->
+  <div class="slide slide-close">
+    <div class="glow-top"></div>
+    <div class="glow-center"></div>
+    <div class="content">
+      <img class="logo" src="https://base44.app/api/apps/6a2967e622900c72295950a6/files/mp/public/6a2967e622900c72295950a6/955522bfb_MontAILogo_v2.png" alt="MontAI"/>
+      <div class="cta-title">Vende más, atiende mejor<br>y <span class="gold">trabaja menos</span></div>
+      <div class="url">www.montai.es</div>
+      <div class="wa-btn">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+        </svg>
+        Habla con nosotros ahora
+      </div>
+    </div>
+    <div class="slide-indicator">
+      <div class="dot"></div><div class="dot"></div><div class="dot"></div>
+      <div class="dot"></div><div class="dot"></div><div class="dot active"></div>
+    </div>
+  </div>
+
+</div>
+
+<div class="copy-hint">Tip: captura solo el recuadro negro (960×540) — en Canva escala automáticamente a 1080p</div>
+
+<script>
+  let current = 0;
+  const slides = document.querySelectorAll('.slide');
+  const buttons = document.querySelectorAll('.nav button');
+  const counter = document.getElementById('counter');
+
+  function goTo(n) {
+    slides[current].classList.remove('active');
+    buttons[current].classList.remove('active');
+    current = n;
+    slides[current].classList.add('active');
+    buttons[current].classList.add('active');
+    counter.textContent = 'Diapositiva ' + (current+1) + ' de 6';
+  }
+
+  document.addEventListener('keydown', e => {
+    if (e.key === 'ArrowRight' && current < 5) goTo(current + 1);
+    if (e.key === 'ArrowLeft' && current > 0) goTo(current - 1);
+  });
+</script>
+
+</body>
+</html>
