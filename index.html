@@ -7,12 +7,12 @@
   <!-- SEO primario -->
   <title>MontAI – Automatiza tu negocio con Inteligencia Artificial | España</title>
   <meta name="description" content="MontAI automatiza tu negocio con IA: atención al cliente 24/7, seguimiento de leads, agendamiento inteligente y propuestas automáticas. Resultados en menos de 30 días. Diagnóstico gratuito." />
-  <meta name="keywords" content="automatización con IA, inteligencia artificial para negocios, agente IA WhatsApp, automatizar leads, chatbot inteligente, automatización empresarial España, MontAI" />
+  <meta name="keywords" content="automatización con IA, inteligencia artificial para negocios, agente IA Telegram, automatizar leads, chatbot inteligente, automatización empresarial España, MontAI" />
   <meta name="author" content="MontAI" />
   <meta name="robots" content="index, follow" />
   <link rel="canonical" href="https://www.montai.es/" />
 
-  <!-- Open Graph (WhatsApp, Facebook, LinkedIn) -->
+  <!-- Open Graph (Telegram, Facebook, LinkedIn) -->
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://www.montai.es/" />
   <meta property="og:title" content="MontAI – Automatiza tu negocio con IA" />
@@ -50,7 +50,7 @@
       "@type": "Country",
       "name": "España"
     },
-    "serviceType": ["Automatización con IA", "Agente IA WhatsApp", "Chatbot inteligente", "Seguimiento de leads", "Agendamiento automático"],
+    "serviceType": ["Automatización con IA", "Agente IA Telegram", "Chatbot inteligente", "Seguimiento de leads", "Agendamiento automático"],
     "offers": {
       "@type": "Offer",
       "description": "Diagnóstico gratuito de automatización para tu negocio",
@@ -58,7 +58,7 @@
       "priceCurrency": "EUR"
     },
     "sameAs": [
-      "https://wa.me/34682839205"
+      "https://t.me/montais_bot"
     ]
   }
   </script>
@@ -90,7 +90,7 @@
         "name": "¿Es fácil integrar la IA con mis sistemas existentes?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Nos conectamos con los sistemas más populares: CRMs, calendarios, WhatsApp, correo y más. Sin problemas técnicos."
+          "text": "Nos conectamos con los sistemas más populares: CRMs, calendarios, Telegram, correo y más. Sin problemas técnicos."
         }
       },
       {
@@ -192,8 +192,8 @@
     }
     .float-anim { animation: float 4s ease-in-out infinite; }
 
-    /* Floating WA button */
-    .wa-float {
+    /* Floating Telegram button */
+    .tg-float {
       position: fixed;
       bottom: 20px;
       right: 20px;
@@ -266,18 +266,18 @@
 </head>
 <body class="bg-black text-white">
 
-<!-- WA SVG reutilizable como símbolo -->
+<!-- Telegram SVG reutilizable como símbolo -->
 <svg style="display:none">
-  <symbol id="wa-icon" viewBox="0 0 24 24" fill="currentColor">
-    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+  <symbol id="tg-icon" viewBox="0 0 448 512" fill="currentColor">
+    <path d="M446.7 98.6l-67.6 318.8c-5.1 22.5-18.4 28.1-37.3 17.5l-103-75.9-49.7 47.8c-5.5 5.5-10.1 10.1-20.7 10.1l7.4-104.9 190.9-172.5c8.3-7.4-1.8-11.5-12.9-4.1L118.4 277.9l-102.5-32c-22.3-6.9-22.7-22.3 4.6-33.1L418.2 65.2c18.6-6.8 34.9 4.1 28.5 33.4z"/>
   </symbol>
 </svg>
 
-<!-- ===== FLOATING WHATSAPP ===== -->
-<a href="https://wa.me/34682839205?text=Hola%20MontAI,%20vengo%20de%20la%20web%20y%20quiero%20automatizar%20mi%20negocio"
-   target="_blank" class="wa-float">
+<!-- ===== FLOATING TELEGRAM ===== -->
+<a href="https://t.me/montais_bot"
+   target="_blank" class="tg-float">
   <div class="btn-gold glow-gold rounded-full p-3.5 flex items-center justify-center w-14 h-14">
-    <svg class="w-7 h-7 text-black"><use href="#wa-icon"/></svg>
+    <svg class="w-7 h-7 text-black"><use href="#tg-icon"/></svg>
   </div>
 </a>
 
@@ -291,10 +291,10 @@
       <a href="#como-funciona" class="nav-link">Cómo funciona</a>
       <a href="#faq" class="nav-link">FAQ</a>
     </div>
-    <a href="https://wa.me/34682839205?text=Hola%20MontAI,%20vengo%20de%20la%20web%20y%20quiero%20automatizar%20mi%20negocio"
+    <a href="https://t.me/montais_bot"
        target="_blank"
        class="flex items-center gap-2 btn-gold text-black text-xs sm:text-sm font-bold px-3 sm:px-5 py-2 sm:py-2.5 rounded-xl glow-gold flex-shrink-0">
-      <svg class="w-4 h-4 text-black"><use href="#wa-icon"/></svg>
+      <svg class="w-4 h-4 text-black"><use href="#tg-icon"/></svg>
       <span>Hablar ahora</span>
     </a>
   </div>
@@ -322,11 +322,11 @@
     </p>
 
     <div class="flex flex-col sm:flex-row gap-3 justify-center lg:justify-start">
-      <a href="https://wa.me/34682839205?text=Hola%20MontAI,%20vengo%20de%20la%20web%20y%20quiero%20automatizar%20mi%20negocio"
+      <a href="https://t.me/montais_bot"
          target="_blank"
          class="inline-flex items-center justify-center gap-3 btn-gold text-black font-black px-6 sm:px-10 py-4 sm:py-5 rounded-2xl glow-gold text-base sm:text-xl">
-        <svg class="w-6 h-6 text-black flex-shrink-0"><use href="#wa-icon"/></svg>
-        Hablar por WhatsApp
+        <svg class="w-6 h-6 text-black flex-shrink-0"><use href="#tg-icon"/></svg>
+        Hablar por Telegram
       </a>
       <a href="#como-funciona"
          class="inline-flex items-center justify-center gap-2 btn-gold-outline font-bold px-6 py-4 rounded-2xl text-base">
@@ -386,10 +386,10 @@
         <div class="w-11 h-11 sm:w-12 sm:h-12 gold-icon-bg rounded-xl flex items-center justify-center text-xl sm:text-2xl">😫</div>
         <h3 class="text-base sm:text-xl font-bold leading-snug">¿Pierdes oportunidades por no dar seguimiento a tus leads?</h3>
         <p class="text-gray-500 text-sm flex-1">Cada lead sin respuesta es dinero que se va con la competencia. Con MontAI, ninguno se escapa.</p>
-        <a href="https://wa.me/34682839205?text=Hola%20MontAI,%20vengo%20de%20la%20web%20y%20quiero%20automatizar%20mi%20negocio"
+        <a href="https://t.me/montais_bot"
            target="_blank"
            class="inline-flex items-center justify-center gap-2 btn-gold text-black text-sm font-bold px-4 py-3 rounded-xl w-full">
-          <svg class="w-4 h-4 text-black flex-shrink-0"><use href="#wa-icon"/></svg>
+          <svg class="w-4 h-4 text-black flex-shrink-0"><use href="#tg-icon"/></svg>
           Resolver esto ahora
         </a>
       </div>
@@ -398,10 +398,10 @@
         <div class="w-11 h-11 sm:w-12 sm:h-12 gold-icon-bg rounded-xl flex items-center justify-center text-xl sm:text-2xl">🔥</div>
         <h3 class="text-base sm:text-xl font-bold leading-snug">¿Tu equipo se ve desbordado por preguntas frecuentes?</h3>
         <p class="text-gray-500 text-sm flex-1">Horas perdidas respondiendo lo mismo. Un agente IA lo hace en segundos, sin descanso.</p>
-        <a href="https://wa.me/34682839205?text=Hola%20MontAI,%20vengo%20de%20la%20web%20y%20quiero%20automatizar%20mi%20negocio"
+        <a href="https://t.me/montais_bot"
            target="_blank"
            class="inline-flex items-center justify-center gap-2 btn-gold text-black text-sm font-bold px-4 py-3 rounded-xl w-full">
-          <svg class="w-4 h-4 text-black flex-shrink-0"><use href="#wa-icon"/></svg>
+          <svg class="w-4 h-4 text-black flex-shrink-0"><use href="#tg-icon"/></svg>
           Resolver esto ahora
         </a>
       </div>
@@ -410,10 +410,10 @@
         <div class="w-11 h-11 sm:w-12 sm:h-12 gold-icon-bg rounded-xl flex items-center justify-center text-xl sm:text-2xl">📅</div>
         <h3 class="text-base sm:text-xl font-bold leading-snug">¿Te cuesta programar citas y agendar reuniones?</h3>
         <p class="text-gray-500 text-sm flex-1">El caos de agendas manuales te roba tiempo valioso. MontAI automatiza todo de principio a fin.</p>
-        <a href="https://wa.me/34682839205?text=Hola%20MontAI,%20vengo%20de%20la%20web%20y%20quiero%20automatizar%20mi%20negocio"
+        <a href="https://t.me/montais_bot"
            target="_blank"
            class="inline-flex items-center justify-center gap-2 btn-gold text-black text-sm font-bold px-4 py-3 rounded-xl w-full">
-          <svg class="w-4 h-4 text-black flex-shrink-0"><use href="#wa-icon"/></svg>
+          <svg class="w-4 h-4 text-black flex-shrink-0"><use href="#tg-icon"/></svg>
           Resolver esto ahora
         </a>
       </div>
@@ -462,10 +462,10 @@
     </div>
 
     <div class="text-center mt-12 fade-up">
-      <a href="https://wa.me/34682839205?text=Hola%20MontAI,%20vengo%20de%20la%20web%20y%20quiero%20mi%20diagnostico%20gratuito"
+      <a href="https://t.me/montais_bot"
          target="_blank"
          class="inline-flex items-center justify-center gap-3 btn-gold text-black font-black px-6 sm:px-10 py-4 sm:py-5 rounded-2xl glow-gold w-full sm:w-auto text-base sm:text-lg">
-        <svg class="w-6 h-6 text-black flex-shrink-0"><use href="#wa-icon"/></svg>
+        <svg class="w-6 h-6 text-black flex-shrink-0"><use href="#tg-icon"/></svg>
         Empezar mi diagnóstico gratis
       </a>
     </div>
@@ -556,10 +556,10 @@
     </div>
 
     <div class="text-center fade-up">
-      <a href="https://wa.me/34682839205?text=Hola%20MontAI,%20vengo%20de%20la%20web%20y%20quiero%20automatizar%20mi%20negocio"
+      <a href="https://t.me/montais_bot"
          target="_blank"
          class="inline-flex items-center justify-center gap-3 btn-gold text-black font-black px-6 sm:px-10 py-4 sm:py-5 rounded-2xl glow-gold w-full sm:w-auto text-base sm:text-lg">
-        <svg class="w-6 h-6 text-black flex-shrink-0"><use href="#wa-icon"/></svg>
+        <svg class="w-6 h-6 text-black flex-shrink-0"><use href="#tg-icon"/></svg>
         Quiero automatizar mi negocio
       </a>
     </div>
@@ -651,10 +651,10 @@
     </div>
 
     <div class="text-center fade-up">
-      <a href="https://wa.me/34682839205?text=Hola%20MontAI,%20vengo%20de%20la%20web%20y%20quiero%20automatizar%20mi%20negocio"
+      <a href="https://t.me/montais_bot"
          target="_blank"
          class="inline-flex items-center justify-center gap-3 btn-gold text-black font-black px-6 sm:px-10 py-4 sm:py-5 rounded-2xl glow-gold w-full sm:w-auto text-base sm:text-lg">
-        <svg class="w-6 h-6 text-black flex-shrink-0"><use href="#wa-icon"/></svg>
+        <svg class="w-6 h-6 text-black flex-shrink-0"><use href="#tg-icon"/></svg>
         Hablar con MontAI
       </a>
     </div>
@@ -701,7 +701,7 @@
           <span class="chevron text-lg flex-shrink-0" style="color:#C9A84C;">▼</span>
         </summary>
         <div class="px-5 sm:px-6 pb-5 sm:pb-6 text-gray-400 text-sm sm:text-base leading-relaxed">
-          Nos conectamos con los sistemas más populares: <strong class="text-white">CRMs, calendarios, WhatsApp, correo y más</strong>. Sin problemas técnicos.
+          Nos conectamos con los sistemas más populares: <strong class="text-white">CRMs, calendarios, Telegram, correo y más</strong>. Sin problemas técnicos.
         </div>
       </details>
 
@@ -711,7 +711,7 @@
           <span class="chevron text-lg flex-shrink-0" style="color:#C9A84C;">▼</span>
         </summary>
         <div class="px-5 sm:px-6 pb-5 sm:pb-6 text-gray-400 text-sm sm:text-base leading-relaxed">
-          Soporte continuo vía WhatsApp y videollamada. Incluye <strong class="text-white">revisiones mensuales de rendimiento</strong> y ajustes. No te dejamos solo.
+          Soporte continuo vía Telegram y videollamada. Incluye <strong class="text-white">revisiones mensuales de rendimiento</strong> y ajustes. No te dejamos solo.
         </div>
       </details>
 
@@ -729,10 +729,10 @@
 
     <div class="text-center fade-up">
       <p class="text-gray-400 text-sm sm:text-base mb-4">¿Tienes más dudas? Escríbenos directamente</p>
-      <a href="https://wa.me/34682839205?text=Hola%20MontAI,%20vengo%20de%20la%20web%20y%20quiero%20automatizar%20mi%20negocio"
+      <a href="https://t.me/montais_bot"
          target="_blank"
          class="inline-flex items-center justify-center gap-3 btn-gold-outline font-bold px-6 sm:px-10 py-4 sm:py-5 rounded-2xl w-full sm:w-auto text-base sm:text-lg">
-        <svg class="w-5 h-5 flex-shrink-0"><use href="#wa-icon"/></svg>
+        <svg class="w-5 h-5 flex-shrink-0"><use href="#tg-icon"/></svg>
         ¿Tienes más dudas? Escríbenos
       </a>
     </div>
@@ -767,11 +767,11 @@
       En 30 minutos te mostramos exactamente cómo MontAI puede automatizar tu negocio y cuánto puedes crecer.
     </p>
 
-    <a href="https://wa.me/34682839205?text=Hola%20MontAI,%20vengo%20de%20la%20web%20y%20quiero%20automatizar%20mi%20negocio"
+    <a href="https://t.me/montais_bot"
        target="_blank"
        class="inline-flex items-center justify-center gap-3 btn-gold text-black font-black px-6 sm:px-12 py-4 sm:py-6 rounded-2xl glow-gold w-full sm:w-auto text-lg sm:text-xl">
-      <svg class="w-7 h-7 text-black flex-shrink-0"><use href="#wa-icon"/></svg>
-      Agendar ahora por WhatsApp
+      <svg class="w-7 h-7 text-black flex-shrink-0"><use href="#tg-icon"/></svg>
+      Agendar ahora por Telegram
     </a>
 
     <div class="flex items-center justify-center gap-2 mt-5 sm:mt-6 text-gray-500">
@@ -800,7 +800,7 @@
           style="background:rgba(255,255,255,0.05); border:1px solid rgba(201,168,76,0.25); focus-ring-color:#C9A84C;" />
       </div>
       <div>
-        <input type="tel" id="leadTelefono" placeholder="Tu WhatsApp (ej: 612345678)" required
+        <input type="tel" id="leadTelefono" placeholder="Tu teléfono (ej: 612345678)" required
           class="w-full px-4 py-3 rounded-xl text-white text-sm outline-none focus:ring-2"
           style="background:rgba(255,255,255,0.05); border:1px solid rgba(201,168,76,0.25);" />
       </div>
@@ -816,7 +816,7 @@
       </button>
     </form>
     <p id="leadConfirm" class="hidden text-center mt-6 text-sm" style="color:#C9A84C;">
-      ✓ ¡Recibido! Te contactamos en menos de 24h por WhatsApp.
+      ✓ ¡Recibido! Te contactamos en menos de 24h por Telegram.
     </p>
   </div>
 </section>
@@ -827,7 +827,7 @@
     <img src="https://res.cloudinary.com/djuqqnrjw/image/upload/v1782304072/WhatsApp_Image_2026-06-24_at_14.25.05_urryde.jpg"
          alt="MontAI" class="h-8 sm:h-10 w-auto object-contain opacity-80" />
     <p class="text-gray-600 text-xs sm:text-sm">© 2026 MontAI · Automatización con IA para negocios en España</p>
-    <a href="https://wa.me/34682839205?text=Hola%20MontAI,%20vengo%20de%20la%20web%20y%20quiero%20automatizar%20mi%20negocio"
+    <a href="https://t.me/montais_bot"
        target="_blank" class="font-medium text-sm transition-colors" style="color:#C9A84C;">
       Contáctanos →
     </a>
@@ -849,13 +849,23 @@
 
   document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
 
+  // Telegram deep-link "start" params only allow [A-Za-z0-9_-], max 64 chars.
+  // Use "-" for spaces within a field so "_" can stay a safe field separator.
+  function slugForTelegram(str) {
+    return str
+      .normalize('NFD').replace(/[̀-ͯ]/g, '') // strip accents
+      .replace(/[^a-zA-Z0-9]+/g, '-')
+      .replace(/^-+|-+$/g, '');
+  }
+
   function enviarLead(e) {
     e.preventDefault();
     const nombre = document.getElementById('leadNombre').value.trim();
     const telefono = document.getElementById('leadTelefono').value.trim();
     const negocio = document.getElementById('leadNegocio').value.trim();
-    const msg = `Hola MontAI, vengo de la web y quiero mi diagnóstico gratuito.%0A%0A👤 Nombre: ${encodeURIComponent(nombre)}%0A📱 Teléfono: ${encodeURIComponent(telefono)}%0A🏢 Negocio: ${encodeURIComponent(negocio)}`;
-    window.open(`https://wa.me/34682839205?text=${msg}`, '_blank');
+    const payload = ['web', slugForTelegram(nombre), slugForTelegram(telefono), slugForTelegram(negocio)]
+      .filter(Boolean).join('_').slice(0, 64);
+    window.open(`https://t.me/montais_bot?start=${payload}`, '_blank');
     document.getElementById('leadForm').classList.add('hidden');
     document.getElementById('leadConfirm').classList.remove('hidden');
   }
