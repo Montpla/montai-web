@@ -1,0 +1,91 @@
+/* ===== MontAI Blog — estilos compartidos ===== */
+* { font-family: 'Inter', sans-serif; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { overflow-x: hidden; background: #000; color: #fff; }
+
+:root {
+  --gold: #C9A84C;
+  --gold-light: #E4C472;
+  --gold-dark: #A07830;
+  --gold-bright: #F0D080;
+}
+
+.gradient-text {
+  background: linear-gradient(135deg, #C9A84C, #F0D080, #C9A84C);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.glow-gold { box-shadow: 0 0 25px rgba(201,168,76,0.35), 0 0 50px rgba(201,168,76,0.1); }
+
+.btn-gold {
+  background: linear-gradient(135deg, #C9A84C, #E4C472, #C9A84C);
+  background-size: 200% 200%;
+  transition: all 0.3s ease;
+  -webkit-tap-highlight-color: transparent;
+}
+.btn-gold:hover { background-position: right center; transform: translateY(-1px); box-shadow: 0 0 30px rgba(201,168,76,0.5), 0 0 60px rgba(201,168,76,0.15); }
+.btn-gold:active { transform: scale(0.97); opacity: 0.9; }
+
+.btn-gold-outline { border: 1.5px solid #C9A84C; color: #C9A84C; transition: all 0.3s ease; }
+.btn-gold-outline:hover { background: rgba(201,168,76,0.08); }
+
+.badge-gold { background: linear-gradient(135deg, rgba(201,168,76,0.15), rgba(201,168,76,0.04)); border: 1px solid rgba(201,168,76,0.3); }
+
+.gold-icon-bg { background: linear-gradient(135deg, rgba(201,168,76,0.15), rgba(201,168,76,0.05)); border: 1px solid rgba(201,168,76,0.25); }
+
+.navbar-glass {
+  background: rgba(0,0,0,0.90);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(201,168,76,0.15);
+}
+
+.hero-bg {
+  background:
+    radial-gradient(ellipse at 50% 0%, rgba(201,168,76,0.10) 0%, transparent 60%),
+    #000;
+}
+
+.section-divider { background: linear-gradient(90deg, transparent, rgba(201,168,76,0.35), transparent); height: 1px; }
+
+.tg-float { position: fixed; bottom: 20px; right: 20px; z-index: 9999; }
+
+.card-hover { transition: border-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease; border: 1px solid rgba(201,168,76,0.1); }
+.card-hover:hover { border-color: rgba(201,168,76,0.3); transform: translateY(-3px); box-shadow: 0 8px 30px rgba(0,0,0,0.4), 0 0 20px rgba(201,168,76,0.08); }
+
+/* ===== Prose (cuerpo de artículo) ===== */
+.prose { color: #d1d1d1; font-size: 1.075rem; line-height: 1.8; }
+.prose h2 { color: #fff; font-size: 1.7rem; font-weight: 800; margin: 2.6rem 0 1rem; line-height: 1.3; }
+.prose h3 { color: var(--gold-light); font-size: 1.25rem; font-weight: 700; margin: 2rem 0 0.75rem; }
+.prose p { margin: 0 0 1.25rem; }
+.prose ul, .prose ol { margin: 0 0 1.5rem; padding-left: 1.4rem; }
+.prose li { margin: 0 0 0.6rem; }
+.prose ul li::marker { color: var(--gold); }
+.prose ol li::marker { color: var(--gold); font-weight: 700; }
+.prose strong { color: #fff; font-weight: 700; }
+.prose a { color: var(--gold-light); text-decoration: underline; text-underline-offset: 3px; }
+.prose a:hover { color: var(--gold-bright); }
+.prose blockquote {
+  border-left: 3px solid var(--gold);
+  background: rgba(201,168,76,0.06);
+  padding: 1rem 1.25rem;
+  margin: 1.75rem 0;
+  border-radius: 0 12px 12px 0;
+  color: #e8e8e8;
+  font-style: italic;
+}
+.prose .callout {
+  background: linear-gradient(135deg, rgba(201,168,76,0.1), rgba(201,168,76,0.03));
+  border: 1px solid rgba(201,168,76,0.25);
+  border-radius: 16px;
+  padding: 1.5rem;
+  margin: 2rem 0;
+  font-style: normal;
+}
+
+@media (max-width: 640px) {
+  .prose { font-size: 1rem; }
+  .prose h2 { font-size: 1.4rem; }
+}
