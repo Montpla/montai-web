@@ -36,6 +36,10 @@ Detalles de acceso, IDs y nombres de credenciales: **`_INFRA-PRIVADO.md`** (loca
 ```
 index.html          Home. CSS propio embebido en <style>. NO usa Tailwind.
 privacidad.html     Política de privacidad (RGPD)
+sectores/*.html     Páginas por sector. GENERADAS, no se editan a mano (ver §2.1)
+css/montai.css      Estilos compartidos, usados por sectores/. La home los lleva
+                    en línea a propósito: es la página de entrada.
+_generar-sectores.py  Generador de sectores/. Los textos viven aquí.
 blog/index.html     Índice del blog
 blog/*.html         Artículos (misma plantilla, ver §5)
 blog/style.css      Estilos compartidos del blog
@@ -44,6 +48,26 @@ robots.txt
 *.png, favicon.*    Iconos
 slides-video.html   Presentación suelta, no enlazada desde el menú
 ```
+
+### 2.1. Páginas de sector
+
+`sectores/*.html` **están generadas**. Si editas el HTML a mano, el siguiente
+`python _generar-sectores.py` se lo lleva por delante. **Edita los textos en el script.**
+
+Existen por dos motivos, y conviene no perder ninguno de vista al tocarlas:
+
+1. **SEO.** "IA para clínicas dentales" compite mucho menos que "automatizar whatsapp negocio",
+   donde la web hoy no aparece. Es una apuesta a medio plazo.
+2. **Venta.** Al visitar un negocio se le manda una página escrita *para su sector*, no la home
+   genérica. Esto sirve desde el primer día, sin esperar a posicionar.
+
+**Cada sector lleva un texto distinto en su enlace de WhatsApp** (`?text=Hola MontAI, tengo una
+clínica dental…`). Así se sabe desde qué página ha escrito cada persona sin necesidad de
+herramientas. No lo unifiques.
+
+**Añadir un sector:** copia un bloque de `SECTORES` en el script, cambia los textos, ejecuta el
+script y luego **tres cosas más a mano**: la URL en `sitemap.xml`, una tarjeta en la sección
+`#sectores` de `index.html`, y las comprobaciones de §8.
 
 ### Despliegue
 
