@@ -263,6 +263,7 @@ def pagina(s):
     <div class="nav-links">
       <a href="/#servicios">Qué hacemos</a>
       <a href="/#proceso">Cómo trabajamos</a>
+      <a href="/#mentoria">Mentoría</a>
       <a href="/#precio">Precio</a>
       <a href="/blog/">Blog</a>
     </div>

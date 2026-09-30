@@ -160,8 +160,10 @@ nav{position:fixed;inset:0 0 auto 0;z-index:100;background:rgba(6,7,12,.55);
 .logo{height:52px;width:auto;object-fit:contain}
 .nav-links{display:none;gap:26px;align-items:center}
 @media(min-width:900px){.nav-links{display:flex}}
-.nav-links a{color:var(--tx2);font-size:.9rem;font-weight:500;transition:color .2s}
+.nav-links a{color:var(--tx2);font-size:.9rem;font-weight:500;transition:color .2s;white-space:nowrap}
 .nav-links a:hover{color:var(--gold)}
+/* Con 7 enlaces, entre 900 y 1060px se partian en dos lineas: se aprieta el hueco en esa franja. */
+@media(min-width:900px) and (max-width:1060px){.nav-links{gap:17px}.nav-links a{font-size:.83rem}}
 
 /* ============ HERO ============ */
 .hero{padding:104px 0 56px}
@@ -365,6 +367,7 @@ footer a:hover{color:var(--gold)}
       <a href="#servicios">Qué hacemos</a>
       <a href="#sectores">Sectores</a>
       <a href="#proceso">Cómo trabajamos</a>
+      <a href="#mentoria">Mentoría</a>
       <a href="#precio">Precio</a>
       <a href="/blog/">Blog</a>
     </div>
@@ -575,6 +578,50 @@ footer a:hover{color:var(--gold)}
         <span class="when">A partir del día 15</span>
       </div>
     </div>
+  </div>
+</section>
+
+<hr class="hr">
+
+<!-- ═══════ MENTORÍA ═══════ -->
+<section id="mentoria">
+  <div class="wrap">
+    <div class="center">
+      <span class="eyebrow">Formación y acompañamiento</span>
+      <h2>Mentoría, capacitación<br><span class="grad">y acompañamiento 1:1</span></h2>
+      <p class="lead">Implantar una herramienta no sirve de mucho si el equipo no la usa. Por eso cada
+        proyecto incluye formación práctica y seguimiento con las personas que van a trabajar con
+        ella a diario.</p>
+    </div>
+    <div class="g2">
+      <div class="card rv">
+        <div class="ic">👥</div>
+        <h3>Sesiones a la medida de cada persona</h3>
+        <p>Individuales o en grupos pequeños, adaptadas al nivel de cada uno. Nadie se queda atrás
+          y nadie pierde el tiempo en lo que ya sabe.</p>
+      </div>
+      <div class="card rv">
+        <div class="ic">🛠️</div>
+        <h3>Con vuestras herramientas, no con ejemplos</h3>
+        <p>La formación es sobre el CRM, las automatizaciones con n8n y Make y los asistentes de IA
+          que usáis de verdad. Nada genérico.</p>
+      </div>
+      <div class="card rv">
+        <div class="ic">🤝</div>
+        <h3>Seguimiento después de la puesta en marcha</h3>
+        <p>El acompañamiento no acaba el día del arranque: se resuelven dudas y se ajustan procesos
+          cuando ya estáis usándolo en el día a día.</p>
+      </div>
+      <div class="card rv">
+        <div class="ic">🎓</div>
+        <h3>Mentoría a directivos y profesionales</h3>
+        <p>Para quien quiere incorporar la IA a su propia forma de trabajar, no solo a la de su
+          equipo.</p>
+      </div>
+    </div>
+    <p class="micro center" style="margin-top:26px">
+      Experiencia en empresas como <b>Grupo Bricket</b>, <b>Botanicc</b> y en el desarrollo
+      <b>ARAYA Punta Cana</b>.</p>
   </div>
 </section>
 

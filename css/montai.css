@@ -77,8 +77,10 @@ nav{position:fixed;inset:0 0 auto 0;z-index:100;background:rgba(6,7,12,.55);
 .logo{height:52px;width:auto;object-fit:contain}
 .nav-links{display:none;gap:26px;align-items:center}
 @media(min-width:900px){.nav-links{display:flex}}
-.nav-links a{color:var(--tx2);font-size:.9rem;font-weight:500;transition:color .2s}
+.nav-links a{color:var(--tx2);font-size:.9rem;font-weight:500;transition:color .2s;white-space:nowrap}
 .nav-links a:hover{color:var(--gold)}
+/* Con 7 enlaces, entre 900 y 1060px se partian en dos lineas: se aprieta el hueco en esa franja. */
+@media(min-width:900px) and (max-width:1060px){.nav-links{gap:17px}.nav-links a{font-size:.83rem}}
 
 /* ============ HERO ============ */
 .hero{padding:104px 0 56px}
