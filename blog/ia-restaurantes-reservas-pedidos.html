@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <title>IA para Restaurantes: Reservas y Pedidos Automáticos | MontAI</title>
+  <meta name="description" content="Automatización de restaurantes con IA: reservas y pedidos por WhatsApp las 24 horas, recordatorios contra no-shows y menos llamadas perdidas en hora punta." />
+  <meta name="keywords" content="automatización restaurantes IA, IA para restaurantes, reservas automáticas, pedidos por WhatsApp, chatbot restaurante, reducir no-shows, hostelería e inteligencia artificial" />
+  <meta name="author" content="MontAI" />
+  <meta name="robots" content="index, follow" />
+  <meta name="theme-color" content="#0d0a00" />
+  <link rel="canonical" href="https://www.montai.es/blog/ia-restaurantes-reservas-pedidos.html" />
+
+  <link rel="icon" href="/favicon.ico" sizes="any" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  <link rel="manifest" href="/site.webmanifest" />
+
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://www.montai.es/blog/ia-restaurantes-reservas-pedidos.html" />
+  <meta property="og:title" content="IA para Restaurantes: Reservas y Pedidos Automáticos" />
+  <meta property="og:description" content="Un asistente de IA que atiende reservas y pedidos por WhatsApp a cualquier hora, para que tu equipo se centre en el servicio." />
+  <meta property="og:image" content="https://www.montai.es/og-image.png" />
+  <meta property="og:locale" content="es_ES" />
+  <meta property="og:site_name" content="MontAI" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "IA para restaurantes: reservas y pedidos automáticos",
+    "description": "Cómo usar la inteligencia artificial para automatizar reservas, pedidos y recordatorios en un restaurante.",
+    "image": "https://www.montai.es/og-image.png",
+    "author": { "@type": "Organization", "name": "MontAI" },
+    "publisher": { "@type": "Organization", "name": "MontAI", "logo": { "@type": "ImageObject", "url": "https://www.montai.es/favicon-512.png" } },
+    "datePublished": "2026-11-10",
+    "dateModified": "2026-11-10",
+    "mainEntityOfPage": "https://www.montai.es/blog/ia-restaurantes-reservas-pedidos.html"
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://www.montai.es/" },
+      { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://www.montai.es/blog/" },
+      { "@type": "ListItem", "position": 3, "name": "IA para restaurantes: reservas y pedidos automáticos" }
+    ]
+  }
+  </script>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/blog/style.css" />
+  <script defer src="/_vercel/insights/script.js"></script>
+  <script defer src="/_vercel/speed-insights/script.js"></script>
+</head>
+<body class="bg-black text-white">
+
+<svg style="display:none">
+    <symbol id="wa-icon" viewBox="0 0 24 24" fill="currentColor">
+    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+  </symbol>
+</svg>
+
+<a href="https://wa.me/34676085750?text=Hola%20MontAI%2C%20vengo%20de%20la%20web%20y%20quiero%20automatizar%20mi%20negocio" target="_blank" class="wa-float">
+  <div class="btn-gold glow-gold rounded-full p-3.5 flex items-center justify-center w-14 h-14">
+    <svg class="w-7 h-7 text-black"><use href="#wa-icon"/></svg>
+  </div>
+</a>
+
+<nav class="navbar-glass fixed top-0 left-0 right-0 z-50">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 py-3 flex items-center justify-between gap-6">
+    <a href="/"><img src="https://res.cloudinary.com/djuqqnrjw/image/upload/v1782304072/WhatsApp_Image_2026-06-24_at_14.25.05_urryde.jpg" alt="MontAI" class="h-20 sm:h-28 w-auto object-contain flex-shrink-0" /></a>
+    <div class="hidden md:flex items-center gap-6">
+      <a href="/#servicios" class="text-white/60 hover:text-white text-sm font-medium transition-colors">Servicios</a>
+      <a href="/#como-funciona" class="text-white/60 hover:text-white text-sm font-medium transition-colors">Cómo funciona</a>
+      <a href="/blog/" style="color:#C9A84C;" class="text-sm font-medium">Blog</a>
+    </div>
+    <a href="https://wa.me/34676085750?text=Hola%20MontAI%2C%20vengo%20de%20la%20web%20y%20quiero%20automatizar%20mi%20negocio" target="_blank" class="flex items-center gap-2 btn-gold text-black text-xs sm:text-sm font-bold px-3 sm:px-5 py-2 sm:py-2.5 rounded-xl glow-gold flex-shrink-0">
+      <svg class="w-4 h-4 text-black"><use href="#wa-icon"/></svg>
+      <span>Hablar ahora</span>
+    </a>
+  </div>
+</nav>
+
+<article class="hero-bg pt-32 sm:pt-40 pb-16 px-4 sm:px-6">
+  <div class="max-w-3xl mx-auto">
+
+    <nav class="text-sm text-gray-500 mb-6">
+      <a href="/" class="hover:text-white">Inicio</a> <span class="mx-1">/</span>
+      <a href="/blog/" class="hover:text-white">Blog</a> <span class="mx-1">/</span>
+      <span style="color:#C9A84C;">Hostelería</span>
+    </nav>
+
+    <span class="text-xs font-semibold" style="color:#C9A84C;">HOSTELERÍA · 6 MIN DE LECTURA</span>
+    <h1 class="font-black text-3xl sm:text-5xl leading-tight mt-3 mb-6">
+      IA para restaurantes: <span class="gradient-text">reservas y pedidos automáticos</span>
+    </h1>
+
+    <div class="prose">
+      <p>Viernes, nueve y media de la noche. La sala está llena, la cocina va a tope y el teléfono no para de sonar: alguien quiere reservar para mañana, otro pregunta si tenéis opciones sin gluten y un tercero quiere encargar comida para llevar. Nadie puede cogerlo. Y cada llamada perdida es, muy probablemente, una mesa o un pedido que se va a otro sitio.</p>
+
+      <p>Si tienes un restaurante, esta escena te suena. La buena noticia es que hoy existe una forma sencilla de resolverla: la <strong>automatización de restaurantes con IA</strong>. Un asistente inteligente que atiende reservas y pedidos por WhatsApp, por la web o por redes sociales, a cualquier hora, mientras tu equipo se centra en lo que de verdad importa: dar de comer bien a la gente que ya está sentada.</p>
+
+      <h2>El problema: el teléfono compite con el servicio</h2>
+      <p>En hostelería, los momentos en los que más clientes quieren contactar contigo son justo los momentos en los que menos puedes atenderles. El mediodía y la noche concentran a la vez las llamadas y el trabajo en sala. El resultado suele ser alguno de estos:</p>
+      <ul>
+        <li><strong>Llamadas sin contestar</strong> en plena hora punta.</li>
+        <li><strong>Reservas apuntadas a toda prisa</strong> en una libreta, con nombres mal escritos o el número de comensales equivocado.</li>
+        <li><strong>Mensajes de WhatsApp que se responden horas después</strong>, cuando el cliente ya ha reservado en otra parte.</li>
+        <li><strong>Mesas vacías por no-shows</strong>, porque nadie tuvo tiempo de confirmar la reserva el día anterior.</li>
+      </ul>
+
+      <h2>Qué puede hacer la IA por tu restaurante</h2>
+      <p>Un agente de IA bien configurado no es un contestador automático con menús de «pulse 1». Entiende lo que el cliente escribe con sus propias palabras y responde como lo haría una persona de tu equipo.</p>
+
+      <h3>Reservas automáticas, 24 horas</h3>
+      <p>El cliente escribe «¿tenéis mesa para cuatro el sábado a las nueve?» y el asistente consulta la disponibilidad, propone alternativas si esa hora está completa, recoge el nombre y el teléfono y deja la reserva anotada en tu sistema o en tu agenda. Sin que nadie de tu equipo tenga que soltar lo que está haciendo.</p>
+
+      <h3>Pedidos para llevar y a domicilio</h3>
+      <p>La IA puede enseñar la carta, tomar el pedido plato a plato, preguntar por extras o alergias, confirmar la hora de recogida y enviar el resumen a cocina. Así reduces errores de transcripción y los pedidos llegan ordenados, no garabateados en un papel junto a la caja.</p>
+
+      <h3>Respuestas a las preguntas de siempre</h3>
+      <p>Horarios, si admitís mascotas, si hay terraza, dónde aparcar, opciones veganas o sin gluten, si se puede celebrar un cumpleaños… Son preguntas que se repiten cada día y que la IA puede contestar al instante con la información que tú le des.</p>
+
+      <h3>Confirmaciones y recordatorios</h3>
+      <p>Un mensaje automático el día antes («Te esperamos mañana a las 21:00, ¿sigue en pie?») permite al cliente confirmar o cancelar con un clic. Si cancela, liberas la mesa a tiempo para otra persona.</p>
+
+      <div class="callout">
+        <strong style="color:#C9A84C;">Clave para que funcione:</strong> la IA solo es tan buena como la información que le das. Antes de ponerla en marcha, deja claros tu carta actualizada, tus horarios, tu capacidad real por turno y las políticas de grupos o cancelaciones. Con eso bien definido, el asistente responde con seguridad y sin inventarse nada.
+      </div>
+
+      <h2>Cómo empezar sin complicarte</h2>
+      <p>No hace falta cambiar toda tu forma de trabajar de golpe. Lo más sensato es avanzar por fases:</p>
+      <ol>
+        <li><strong>Elige el canal principal.</strong> Para la mayoría de restaurantes en España, WhatsApp es donde ya escriben los clientes. Empieza por ahí.</li>
+        <li><strong>Automatiza primero las reservas.</strong> Es lo que más tiempo consume y donde antes se nota la mejora.</li>
+        <li><strong>Añade las preguntas frecuentes.</strong> Recopila durante una semana lo que te preguntan y conviértelo en respuestas para el asistente.</li>
+        <li><strong>Suma los pedidos para llevar.</strong> Cuando las reservas funcionen con fluidez, amplía a pedidos con la carta completa.</li>
+        <li><strong>Activa los recordatorios.</strong> Es un paso pequeño que ayuda a llenar las mesas que antes se quedaban vacías.</li>
+      </ol>
+
+      <h2>«¿Y no quedará frío para mis clientes?»</h2>
+      <p>Es la duda más habitual, y es razonable: en hostelería el trato cercano lo es todo. Pero piensa en la alternativa real. No es elegir entre la IA y una persona atenta al teléfono; es elegir entre una respuesta inmediata y amable, o no recibir respuesta. Un asistente bien diseñado habla con el tono de tu casa, saluda por el nombre y, cuando la situación lo requiere —un evento grande, una queja, una petición especial—, <strong>pasa la conversación a una persona de tu equipo</strong>.</p>
+
+      <blockquote>La IA no sustituye la hospitalidad de tu restaurante: le quita de encima el teléfono para que tu equipo pueda dedicarse a ella.</blockquote>
+
+      <h2>Lo que ganas en el día a día</h2>
+      <ul>
+        <li><strong>Menos interrupciones</strong> durante el servicio.</li>
+        <li><strong>Reservas y pedidos fuera de horario</strong>, cuando el local está cerrado y antes se perdían.</li>
+        <li><strong>Menos errores</strong> en nombres, horas y comandas.</li>
+        <li><strong>Información ordenada</strong> de tus clientes para fidelizarlos después con promociones o avisos de nuevos platos.</li>
+      </ul>
+      <p>Cada restaurante es distinto, y los resultados dependen de tu volumen, tu carta y tu forma de trabajar. Pero si hoy pierdes llamadas en hora punta o respondes WhatsApps con horas de retraso, hay margen claro para mejorar.</p>
+    </div>
+
+    <div class="badge-gold rounded-3xl p-8 mt-12 text-center">
+      <h2 class="font-black text-2xl mb-3">Automatiza las reservas de tu restaurante</h2>
+      <p class="text-gray-300 mb-6 max-w-xl mx-auto">Montamos un asistente de IA que atiende reservas, pedidos y preguntas de tus clientes por WhatsApp mientras tú te centras en el servicio. Diagnóstico gratuito.</p>
+      <a href="https://wa.me/34676085750?text=Hola%20MontAI%2C%20vengo%20de%20la%20web%20y%20quiero%20automatizar%20mi%20negocio" target="_blank" class="inline-flex items-center justify-center gap-3 btn-gold text-black font-black px-8 py-4 rounded-2xl glow-gold">
+        <svg class="w-5 h-5 text-black"><use href="#wa-icon"/></svg>
+        Quiero mi diagnóstico gratuito
+      </a>
+    </div>
+
+    <div class="mt-12">
+      <h3 class="text-sm font-semibold mb-4" style="color:#C9A84C;">SIGUE LEYENDO</h3>
+      <div class="grid sm:grid-cols-2 gap-4">
+        <a href="/blog/chatbot-agendar-citas-automatico.html" class="card-hover rounded-xl p-5 bg-black">
+          <p class="font-bold mb-1">Chatbot para agendar citas automáticamente</p>
+          <p class="text-gray-500 text-sm">Deja que la IA llene tu agenda sola →</p>
+        </a>
+        <a href="/blog/reducir-ausencias-citas-recordatorios.html" class="card-hover rounded-xl p-5 bg-black">
+          <p class="font-bold mb-1">Reducir ausencias con recordatorios automáticos</p>
+          <p class="text-gray-500 text-sm">Menos huecos vacíos en tu agenda →</p>
+        </a>
+      </div>
+    </div>
+
+  </div>
+</article>
+
+<footer class="bg-black py-6 sm:py-8 px-4 sm:px-6" style="border-top: 1px solid rgba(201,168,76,0.15);">
+  <div class="max-w-5xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-3 sm:gap-4 text-center sm:text-left">
+    <a href="/"><img src="https://res.cloudinary.com/djuqqnrjw/image/upload/v1782304072/WhatsApp_Image_2026-06-24_at_14.25.05_urryde.jpg" alt="MontAI" class="h-8 sm:h-10 w-auto object-contain opacity-80" /></a>
+    <p class="text-gray-600 text-xs sm:text-sm">© 2026 MontAI · Automatización con IA para negocios en España</p>
+    <a href="https://wa.me/34676085750?text=Hola%20MontAI%2C%20vengo%20de%20la%20web%20y%20quiero%20automatizar%20mi%20negocio" target="_blank" class="font-medium text-sm transition-colors" style="color:#C9A84C;">Contáctanos →</a>
+  </div>
+  <div class="max-w-5xl mx-auto mt-4 pt-4 text-center" style="border-top: 1px solid rgba(255,255,255,0.05);">
+    <a href="/privacidad.html" class="text-gray-600 hover:text-gray-400 text-xs underline">Política de Privacidad y Aviso Legal</a>
+  </div>
+</footer>
+
+</body>
+</html>
