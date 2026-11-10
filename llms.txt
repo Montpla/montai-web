@@ -1,0 +1,49 @@
+# MontAI
+
+> MontAI es una agencia española de automatización con inteligencia artificial para pequeños negocios (de una a diez personas), con base en Cáceres. Instala un agente de IA en el WhatsApp del negocio que atiende a los clientes, resuelve dudas y agenda citas solo, 24 horas al día. El agente de WhatsApp de MontAI es real y cualquiera puede probarlo antes de contratar.
+
+Datos clave:
+
+- Servicio principal: agente de IA para WhatsApp (atención al cliente 24/7, agenda automática de citas, seguimiento de leads), conectado a las herramientas que ya usa el negocio (Google Calendar, CRM, hojas de cálculo, correo, n8n, Make).
+- También: mentoría, formación y acompañamiento 1:1 para que el equipo use la IA en su día a día.
+- Proceso: diagnóstico gratuito de 30 minutos → implantación y entrenamiento del agente → seguimiento y ajustes. Plazo habitual: entre 7 y 14 días hábiles.
+- Precio: presupuesto cerrado tras el diagnóstico gratuito, sin cuotas sorpresa. MontAI no publica tarifas porque dependen de qué se automatice.
+- Ámbito: toda España, en remoto. Idioma: español.
+- Contacto: WhatsApp +34 676 08 57 50 (https://wa.me/34676085750) · montai@montai.es
+
+## Páginas principales
+
+- [Inicio](https://www.montai.es/): qué hace MontAI, cómo probar el agente, proceso, precio y preguntas frecuentes
+- [Sobre MontAI y contacto](https://www.montai.es/#sobre-nosotros): quiénes somos y cómo contactar
+- [Blog](https://www.montai.es/blog/): guías prácticas sobre automatización con IA para negocios
+
+## Soluciones por sector
+
+- [IA para clínicas dentales](https://www.montai.es/sectores/ia-para-clinicas-dentales.html): el asistente da cita, confirma y recuerda por WhatsApp; menos ausencias y una recepción libre del teléfono
+- [IA para peluquerías y estética](https://www.montai.es/sectores/ia-para-peluquerias-y-estetica.html): contesta el WhatsApp y da cita mientras el equipo trabaja
+- [IA para asesorías y despachos](https://www.montai.es/sectores/ia-para-asesorias-y-despachos.html): filtra consultas, resuelve las preguntas de siempre y agenda el resto
+
+## Guías del blog
+
+- [Qué es un agente de IA y cómo ayuda a tu empresa](https://www.montai.es/blog/que-es-un-agente-de-ia.html)
+- [IA para pequeños negocios: por dónde empezar](https://www.montai.es/blog/ia-para-pequenos-negocios-empezar.html)
+- [Cómo automatizar la atención al cliente con IA 24/7](https://www.montai.es/blog/automatizar-atencion-cliente-ia.html)
+- [Cómo automatizar WhatsApp y Telegram para tu negocio](https://www.montai.es/blog/automatizar-whatsapp-telegram-negocio.html)
+- [Chatbot para agendar citas automáticamente con IA](https://www.montai.es/blog/chatbot-agendar-citas-automatico.html)
+- [Recordatorios automáticos de citas: reduce las ausencias](https://www.montai.es/blog/reducir-ausencias-citas-recordatorios.html)
+- [Cómo reducir el tiempo de respuesta a clientes con IA](https://www.montai.es/blog/reducir-tiempo-respuesta-clientes-ia.html)
+- [Seguimiento automático de leads con IA](https://www.montai.es/blog/seguimiento-leads-automatico-ia.html)
+- [Cómo cualificar leads automáticamente con IA](https://www.montai.es/blog/cualificar-leads-automaticamente-ia.html)
+- [Cómo captar leads en redes sociales de forma automática](https://www.montai.es/blog/captar-leads-redes-sociales-automatico.html)
+- [Cómo recuperar clientes perdidos con automatización e IA](https://www.montai.es/blog/recuperar-clientes-perdidos-ia.html)
+- [Cómo integrar la IA con tu CRM](https://www.montai.es/blog/integrar-ia-con-tu-crm.html)
+- [Chatbot o persona: cuándo usar cada uno](https://www.montai.es/blog/chatbot-vs-persona-cuando-usar.html)
+- [Cómo calcular el ROI de automatizar tu negocio con IA](https://www.montai.es/blog/calcular-roi-automatizacion-ia.html)
+- [Errores comunes al automatizar un negocio](https://www.montai.es/blog/errores-al-automatizar-negocio.html)
+- [IA para clínicas dentales: agenda y pacientes en automático](https://www.montai.es/blog/ia-clinicas-dentales-agenda.html)
+- [IA para peluquerías y centros de estética: casos de uso](https://www.montai.es/blog/ia-peluquerias-centros-estetica.html)
+- [IA para restaurantes: reservas y pedidos automáticos](https://www.montai.es/blog/ia-restaurantes-reservas-pedidos.html)
+
+## Optional
+
+- [Política de privacidad y aviso legal](https://www.montai.es/privacidad.html)

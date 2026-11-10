@@ -393,7 +393,7 @@ def pagina(s):
   <div class="wrap f-in">
     <a href="/"><img src="{LOGO}" alt="MontAI" style="height:34px;opacity:.75" width="98" height="34"/></a>
     <p>© 2026 MontAI · Automatización con IA para negocios en España</p>
-    <p><a href="/blog/">Blog</a> · <a href="/privacidad.html">Privacidad</a></p>
+    <p><a href="/blog/">Blog</a> · <a href="/#sobre-nosotros">Sobre nosotros</a> · <a href="/#contacto">Contacto</a> · <a href="/privacidad.html#aviso-legal">Aviso legal</a> · <a href="/privacidad.html">Privacidad</a></p>
   </div>
 </footer>
 

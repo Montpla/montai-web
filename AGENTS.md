@@ -45,6 +45,8 @@ blog/*.html         Artículos (misma plantilla, ver §5)
 blog/style.css      Estilos compartidos del blog
 sitemap.xml         Hay que añadir cada artículo nuevo a mano
 robots.txt
+llms.txt            Resumen del sitio para asistentes de IA (AI SEO). Ver §2.2
+vercel.json         Cabeceras de seguridad (CSP, X-Frame-Options...). Ver §2.3
 *.png, favicon.*    Iconos
 slides-video.html   Presentación suelta, no enlazada desde el menú
 ```
@@ -66,8 +68,33 @@ clínica dental…`). Así se sabe desde qué página ha escrito cada persona si
 herramientas. No lo unifiques.
 
 **Añadir un sector:** copia un bloque de `SECTORES` en el script, cambia los textos, ejecuta el
-script y luego **tres cosas más a mano**: la URL en `sitemap.xml`, una tarjeta en la sección
-`#sectores` de `index.html`, y las comprobaciones de §8.
+script y luego **cuatro cosas más a mano**: la URL en `sitemap.xml`, la línea en `llms.txt`, una
+tarjeta en la sección `#sectores` de `index.html`, y las comprobaciones de §8.
+
+### 2.2. AI SEO (llms.txt, WebMCP, datos estructurados)
+
+Se añadió en noviembre de 2026 a raíz de una auditoría SEO (77/100). Mantenlo:
+
+- **`llms.txt`**: índice en Markdown del sitio para asistentes de IA. **Cada artículo o sector
+  nuevo se añade aquí también**, igual que al sitemap.
+- **WebMCP**: la home registra dos herramientas para agentes de IA del navegador
+  (`obtener_informacion_montai`, `contactar_por_whatsapp`) en el último `<script>` de `index.html`.
+  Leen los datos del propio DOM (`#servicios h3`, `#sectores a.card`, `#proceso h3`, `#faq .faq-item`):
+  si cambias esas clases o ids, actualiza el script. Usa `document.modelContext` (con
+  `navigator.modelContext` de respaldo) y no hace nada si el navegador no lo soporta.
+- **JSON-LD de la home**: un `@graph` con Organization/ProfessionalService, WebSite, WebPage
+  (con `about`/`mentions`) y BreadcrumbList, más el FAQPage. **El FAQPage debe coincidir con las
+  preguntas visibles** de `#faq`: si cambias una pregunta, cámbiala en los dos sitios.
+- **El FAQ no es un acordeón** a propósito: Google da menos peso al contenido oculto en
+  `<details>`/pestañas. No lo vuelvas a plegar.
+- Title de la home ≤ 60 caracteres y meta description ≤ 160.
+
+### 2.3. Cabeceras de seguridad (`vercel.json`)
+
+La CSP lista los únicos orígenes externos permitidos: Cloudinary y base44 (imágenes), Google Fonts
+y `cdn.tailwindcss.com` (blog y privacidad). **Si una página nueva carga algo de otro dominio, hay
+que añadirlo a la CSP o el navegador lo bloqueará en silencio.** Después de publicar, abre la página
+y mira la consola: un error "Content Security Policy" significa que falta un origen.
 
 ### Despliegue
 
@@ -161,8 +188,8 @@ Se publica **1 artículo por semana** sin intervención humana.
   `[ ] slug | Título | palabra clave`. La rutina coge el primer `[ ]`, escribe y lo marca `[x]`.
 - **Plantilla:** copia `blog/seguimiento-leads-automatico-ia.html` y adapta solo meta, JSON-LD,
   breadcrumb, `<h1>` y el cuerpo de `<div class="prose">`.
-- **Al publicar hay que tocar 3 ficheros:** el artículo nuevo, `blog/index.html` (añadir tarjeta al
-  grid) y `sitemap.xml` (añadir `<url>`).
+- **Al publicar hay que tocar 4 ficheros:** el artículo nuevo, `blog/index.html` (añadir tarjeta al
+  grid), `sitemap.xml` (añadir `<url>`) y `llms.txt` (añadir una línea en "Guías del blog").
 - **Cada artículo debe llevar los dos scripts de analítica** en el `<head>` (ver §6). Si faltan,
   ese artículo no se mide.
 
